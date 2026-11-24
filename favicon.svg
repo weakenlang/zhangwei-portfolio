@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#1846ff"/>
+  <rect x="7" y="7" width="50" height="50" rx="4" fill="#ffdf46" transform="rotate(-3 32 32)"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="24" font-weight="900" fill="#0b0f18">ZW</text>
+</svg>
