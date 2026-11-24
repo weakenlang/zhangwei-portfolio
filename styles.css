@@ -536,13 +536,14 @@ button {
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1.16fr 0.84fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
 .project-card {
-  min-height: 560px;
+  min-height: 0;
   display: grid;
+  grid-template-rows: 320px auto;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -556,26 +557,18 @@ button {
   box-shadow: 0 22px 60px rgba(27, 31, 25, 0.12);
 }
 
-.project-featured {
-  grid-row: span 2;
-  grid-template-rows: minmax(290px, 1fr) auto;
-}
-
-.project-compact {
-  grid-template-columns: 42% 58%;
-  min-height: 271px;
-}
-
 .project-image {
   position: relative;
-  min-height: 100%;
+  height: 320px;
   overflow: hidden;
   background: #d9d3c8;
 }
 
 .project-image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 50%;
   transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -584,8 +577,16 @@ button {
   transform: scale(1.035);
 }
 
-.project-featured .project-image img {
-  object-position: center 38%;
+.project-card:nth-child(1) .project-image img {
+  object-position: center 58%;
+}
+
+.project-card:nth-child(2) .project-image img {
+  object-position: center 46%;
+}
+
+.project-card:nth-child(3) .project-image img {
+  object-position: center 55%;
 }
 
 .project-index {
@@ -605,6 +606,8 @@ button {
 
 .project-copy {
   padding: 28px 30px 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tag-row {
@@ -625,7 +628,7 @@ button {
 
 .project-copy h3 {
   margin: 18px 0 9px;
-  font: 800 clamp(28px, 3vw, 44px)/1.1 var(--serif);
+  font: 800 clamp(30px, 2.8vw, 40px)/1.1 var(--serif);
   letter-spacing: -0.035em;
 }
 
@@ -640,7 +643,7 @@ button {
   margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 14px 20px;
 }
 
 .project-metrics span {
@@ -655,7 +658,8 @@ button {
 }
 
 .text-link {
-  margin-top: 24px;
+  margin-top: auto;
+  padding-top: 24px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1905,15 +1909,15 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .project-featured {
-    grid-row: auto;
-    grid-template-columns: 54% 46%;
+  .project-card {
+    grid-template-columns: 42% 58%;
     grid-template-rows: none;
-    min-height: 410px;
+    min-height: 310px;
   }
 
-  .project-compact {
-    min-height: 290px;
+  .project-image {
+    height: auto;
+    min-height: 310px;
   }
 
   .case-heading {
@@ -2138,19 +2142,16 @@ button {
     font-size: 13px;
   }
 
-  .project-featured,
-  .project-compact {
+  .project-card {
     grid-template-columns: 1fr;
+    grid-template-rows: 300px auto;
     min-height: 0;
   }
 
   .project-image {
-    min-height: 280px;
-    max-height: 380px;
-  }
-
-  .project-compact .project-image {
-    min-height: 230px;
+    height: 300px;
+    min-height: 0;
+    max-height: none;
   }
 
   .project-copy {
@@ -2572,20 +2573,23 @@ button {
     break-inside: avoid;
   }
 
-  .project-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .demo-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .project-featured {
-    grid-row: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 220px auto;
+  .project-card {
+    grid-template-columns: 34% 66%;
+    grid-template-rows: none;
+    min-height: 220px;
   }
 
-  .project-compact {
-    grid-template-columns: 40% 60%;
-    min-height: 230px;
+  .project-image {
+    height: auto;
+    min-height: 220px;
   }
 
   .case-heading h2 {
