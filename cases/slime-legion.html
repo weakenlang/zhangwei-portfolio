@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="合合合英雄案例：在海外长线产品的既有框架中，修复数值失衡并建立新的增长目标。"
+    />
+    <title>合合合英雄｜存量调优案例｜张伟</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="case-page slime-page">
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <header class="site-header case-header">
+      <div class="nav-shell">
+        <a class="brand" href="../index.html" aria-label="返回作品集首页">
+          <span class="brand-mark">ZW</span>
+          <span class="brand-copy"><strong>张伟</strong><small>游戏制作人 · 成都</small></span>
+        </a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="打开导航"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="案例导航">
+          <a href="../index.html#work">全部案例</a>
+          <a href="captaincapy.html">CaptainCapy</a>
+          <a href="guanguan.html">关关难不住</a>
+          <a class="nav-contact" href="../index.html#contact">联系我</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="case-hero">
+        <div class="shell case-hero-grid">
+          <div>
+            <p class="case-stage">海外长线运营 · 主策划 · 2024.04–2024.11</p>
+            <h1 class="chinese">合合合英雄</h1>
+            <p class="case-hero-summary">
+              产品已进入长线运营。面对历史投放、英雄强弱与资源价值缺少统一规划的问题，团队保留有效框架，重新建立可判断的价值尺度，并以领主模块与 PvP 打开新的增长空间。
+            </p>
+            <p class="case-hero-note">
+              我负责部分英雄与品质价值校准、领主模块、PvP 相关内容、大版本功能和部分运营活动设计。数据采用 AppMagic 的相对变化口径。
+            </p>
+          </div>
+          <div class="case-hero-visual">
+            <div class="case-hero-dot">不推翻旧框架<br />先修复价值尺度</div>
+            <img class="case-hero-visual main" src="../assets/slime-battle.webp" alt="Slime Legion 战斗界面" />
+            <img class="case-hero-visual secondary" src="../assets/slime-hero.webp" alt="Slime Legion 英雄界面" />
+          </div>
+        </div>
+      </section>
+
+      <div class="shell">
+        <div class="case-facts" aria-label="项目基本信息">
+          <div class="fact"><span>公司</span><strong>孚谦科技</strong></div>
+          <div class="fact"><span>角色</span><strong>主策划</strong></div>
+          <div class="fact"><span>团队</span><strong>15 人</strong></div>
+          <div class="fact"><span>统计周期</span><strong>2024.05–2024.12</strong></div>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <section class="case-block">
+          <div class="shell">
+            <div class="section-head">
+              <span class="section-no">01</span>
+              <h2>重新建立价值尺度。<br />让存量内容重新可判断。</h2>
+              <p>资源来源多、玩法多、养成系统多，但不同资源的产出与消耗价值没有统一尺度，英雄强弱也没有稳定的品质参照。</p>
+            </div>
+            <div class="problem-grid">
+              <p class="problem-lead">
+                玩家能感知某些英雄过强、某些成长线没有意义，却无法理解投入与回报的关系。继续追加同类系统只会放大历史问题。
+              </p>
+              <div class="problem-facts">
+                <article><strong>英雄强度</strong><p>部分英雄的实际强度与品质定位脱节，导致新英雄设计缺少可靠参照。</p></article>
+                <article><strong>资源产销</strong><p>金币、体力、卡牌和材料各有多个来源，但部分资源形成缺口，另一些长期溢出。</p></article>
+                <article><strong>增长目标</strong><p>成熟养成线逐渐失去长期吸引力，产品需要一个能与现有内容并存的新目标。</p></article>
+              </div>
+            </div>
+            <div class="visual-break">
+              <figure>
+                <img src="../assets/slime-key.webp" alt="Slime Legion 主视觉" />
+                <figcaption>产品已经形成明确的角色与美术识别，改版重点是内部数值与目标结构。</figcaption>
+              </figure>
+              <figure>
+                <img src="../assets/slime-defense.webp" alt="Slime Legion 防守战斗界面" />
+                <figcaption>在保留既有战斗、英雄收集和局外成长的基础上完成局部重构。</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-block tint">
+          <div class="shell">
+            <div class="section-head">
+              <span class="section-no">02</span>
+              <h2>先建立统一模型，<br />再校准具体英雄。</h2>
+              <p>过程不是直接改一张英雄表，而是先盘点资源价值、玩家进度和品质强度，找到哪些问题可以通过局部调整解决。</p>
+            </div>
+            <div class="process-grid">
+              <div class="process-sticky">
+                <h3>从资源账本走到英雄强度</h3>
+                <p>
+                  我把资源来源、消耗、溢出和缺口整理为统一价值表，再梳理每日免费产出与不同层级玩家的养成进度。资源价值稳定后，英雄强弱才有可比较的坐标。
+                </p>
+              </div>
+              <div class="process-list">
+                <article class="process-item">
+                  <span>01</span>
+                  <div>
+                    <h3>盘点资源来源与消耗</h3>
+                    <p>逐项整理金币、钻石、体力、卡牌、强化石、天赋石和稀有材料的产出位置与消耗场景，识别短缺和溢出。</p>
+                  </div>
+                </article>
+                <article class="process-item">
+                  <span>02</span>
+                  <div>
+                    <h3>建立品质强度参照</h3>
+                    <p>按绿、蓝、紫、橙、红建立初始属性、成长和技能效率模型，让新英雄的能力区间可比较、可控制。</p>
+                  </div>
+                </article>
+                <article class="process-item">
+                  <span>03</span>
+                  <div>
+                    <h3>校准存量英雄</h3>
+                    <p>保留现有框架，对明显过强的英雄做局部调整；优先修正品质价值与实际强度之间最影响选择的关系。</p>
+                  </div>
+                </article>
+                <article class="process-item">
+                  <span>04</span>
+                  <div>
+                    <h3>补新的长期目标</h3>
+                    <p>新增独立“领主”模块，并配合 PvP 形成新的成长与竞争场景，让老玩家重新拥有追求方向。</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="loop-graphic" aria-label="英雄品质模型">
+              <div class="loop-step"><span>绿色</span><strong>基础强度</strong><small>攻击 20 / 生命 100</small></div>
+              <div class="loop-step"><span>蓝色</span><strong>稳定提升</strong><small>攻击 25 / 生命 120</small></div>
+              <div class="loop-step"><span>紫色</span><strong>功能分化</strong><small>攻击 30–32 / 生命 150</small></div>
+              <div class="loop-step"><span>橙色 / 红色</span><strong>高阶强度</strong><small>攻击 50–60 / 生命 250–350</small></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-block">
+          <div class="shell">
+            <div class="section-head">
+              <span class="section-no">03</span>
+              <h2>兼顾存量修复，<br />也为下一版打开增长空间。</h2>
+              <p>局部数值修复解决历史偏差；领主模块与 PvP 提供新的长期目标；统一品质模型让后续英雄不再重复失控。</p>
+            </div>
+            <div class="decision-grid">
+              <article class="decision">
+                <b>保留旧框架</b>
+                <p>不重构整套系统，降低对已经在玩用户的冲击，也避免把项目周期消耗在迁移与兼容上。</p>
+                <strong>先解决影响判断的失衡</strong>
+              </article>
+              <article class="decision">
+                <b>重设英雄区间</b>
+                <p>把品质、初始属性、成长和技能效率放在同一模型里，后续英雄按区间验证，而不是每次单独拍脑袋。</p>
+                <strong>让强度可解释</strong>
+              </article>
+              <article class="decision">
+                <b>增加领主与 PvP</b>
+                <p>在原有养成之上增加新的长期目标和竞争场景，配合运营活动创造新的参与理由。</p>
+                <strong>为成熟产品补增长点</strong>
+              </article>
+            </div>
+            <div class="solution-layout">
+              <div class="solution-copy">
+                <h3>结果来自“修复”与“新增”共同作用</h3>
+                <p>
+                  数值校准让旧内容重新具有选择意义，领主模块和 PvP 提供新的长期目标。我的负责范围覆盖部分英雄与品质价值校准、领主及 PvP 相关内容、大版本功能与部分运营活动，不把整体增长归因于单个系统。
+                </p>
+              </div>
+              <div class="solution-image">
+                <img src="../assets/slime-hero.webp" alt="Slime Legion 英雄收集与养成界面" />
+                <div class="solution-note">英雄强度、品质价值与养成投入重新落在同一套尺度上。</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-block dark">
+          <div class="shell">
+            <div class="section-head">
+              <span class="section-no">04</span>
+              <h2>相对变化，说明方向有效。</h2>
+              <p>AppMagic 监测周期显示 ARPU 与人均时长同时提升。这里使用相对指数表达，不代表绝对收入。</p>
+            </div>
+            <div class="metrics-layout">
+              <div>
+                <h3>调整后，商业化与活跃度一起回升</h3>
+                <p class="result-note">
+                  100 代表调优前基线。数据变化由团队共同工作产生，不单独归因于领主、PvP 或某项数值调整。
+                </p>
+              </div>
+              <div class="metric-grid">
+                <div class="metric-card"><span>ARPU 变化</span><strong>+30%</strong><small>100 → 130 相对指数</small></div>
+                <div class="metric-card"><span>人均时长</span><strong>+25%</strong><small>100 → 125 相对指数</small></div>
+                <div class="metric-card"><span>存量英雄</span><strong>局部校准</strong><small>保留框架，处理明显强度与品质错配</small></div>
+                <div class="metric-card"><span>新增目标</span><strong>领主 + PvP</strong><small>建立新的长期成长与竞争场景</small></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-block">
+          <div class="shell">
+            <div class="section-head">
+              <span class="section-no">05</span>
+              <h2>复盘：成熟产品，<br />更要把每次改动算清楚。</h2>
+              <p>成熟产品更需要控制试错成本。先理解历史失衡的原因，再决定哪些系统值得保留，并在同一套价值尺度下规划新增内容。</p>
+            </div>
+            <div class="learnings">
+              <article class="learning">
+                <h3>做对的</h3>
+                <p>先盘点资源与品质模型，把“感觉强弱”转换成可计算的参照；修复与新增并行，避免只调数值或只加系统。</p>
+              </article>
+              <article class="learning">
+                <h3>下一次的改进</h3>
+                <p>在更早阶段记录每个资源与系统的目标价值，让后续设计不再依赖补丁式校准。对存量用户的分层影响也需要更早拆分验证。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="next-case">
+        <div class="shell">
+          <a href="captaincapy.html">
+            <div><span>回到第一个案例 · 0→1</span><strong>CaptainCapy</strong></div>
+            <span class="arrow" aria-hidden="true">›</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-row">
+        <p>© 2026 张伟</p>
+        <p>数据采用项目确认的统计周期与相对口径。</p>
+        <a href="../index.html">返回首页</a>
+      </div>
+    </footer>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

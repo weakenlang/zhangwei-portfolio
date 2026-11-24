@@ -1,13 +1,14 @@
 const menuButton = document.querySelector(".menu-button");
 const siteNav = document.querySelector(".site-nav");
 
-if (menuButton && siteNav) {
-  const closeMenu = () => {
-    document.body.classList.remove("menu-open");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "打开导航");
-  };
+function closeMenu() {
+  if (!menuButton || !siteNav) return;
+  document.body.classList.remove("menu-open");
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "打开导航");
+}
 
+if (menuButton && siteNav) {
   menuButton.addEventListener("click", () => {
     const isOpen = document.body.classList.toggle("menu-open");
     menuButton.setAttribute("aria-expanded", String(isOpen));
@@ -23,36 +24,29 @@ if (menuButton && siteNav) {
   });
 }
 
-const revealItems = document.querySelectorAll("[data-reveal]");
+document.querySelectorAll("[data-copy]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const value = button.dataset.copy;
+    const original = button.textContent;
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.08, rootMargin: "0px 0px -36px" }
-  );
+    try {
+      await navigator.clipboard.writeText(value);
+      button.textContent = "已复制";
+    } catch {
+      const input = document.createElement("input");
+      input.value = value;
+      input.setAttribute("readonly", "");
+      input.style.position = "fixed";
+      input.style.opacity = "0";
+      document.body.append(input);
+      input.select();
+      document.execCommand("copy");
+      input.remove();
+      button.textContent = "已复制";
+    }
 
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-}
-
-const header = document.querySelector(".site-header");
-let lastScrollY = window.scrollY;
-
-window.addEventListener(
-  "scroll",
-  () => {
-    if (!header || window.innerWidth <= 760) return;
-    const currentScrollY = window.scrollY;
-    header.classList.toggle("is-scrolled", currentScrollY > 24);
-    lastScrollY = currentScrollY;
-  },
-  { passive: true }
-);
+    window.setTimeout(() => {
+      button.textContent = original;
+    }, 1800);
+  });
+});
